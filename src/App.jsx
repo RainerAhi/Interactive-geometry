@@ -1,6 +1,5 @@
 import { Loader } from "@react-three/drei";
 import CanvasContainer from "./CanvasContainer";
-import Experience from "./Experience";
 import { SectionOne } from "./Sections/SectionOne";
 import Lenis from "@studio-freight/lenis";
 
@@ -34,10 +33,14 @@ function App() {
         <main className="main" >
             <LoadingScreen />
             <div  className="experience">
-                <Suspense>
+                {/* <Suspense>
                 <CanvasContainer />
-                </Suspense>
+                </Suspense> */}
             </div>
+
+            <SectionOne />
+            <SectionTwo />
+            <SectionThree />
             
         </main>
         </>

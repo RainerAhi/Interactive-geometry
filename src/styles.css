@@ -1,26 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
-@import url('https://fonts.cdnfonts.com/css/lakesight-personal-use-only');
-@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Solway:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Solway:wght@700&display=swap');
-@import url("https://db.onlinewebfonts.com/c/14679a7a97d388dac3a0380375ca4afe?family=Neometric+Alt+Heavy");
-@import url("https://db.onlinewebfonts.com/c/21553b99c039b140f424afd283a33017?family=Mark+Web+W04+Ultra");
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-
-@font-face {
-  font-family: 'Lakesight';
-  src: url('./Lakesight.woff2') format('woff2'),
-      url('./Lakesight.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 * {
   box-sizing: border-box;
@@ -33,21 +15,39 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: #f1f1fb;
   font-family: 'Open Sans', sans-serif;
-  color: var(--text-color);
   text-align: center;
   --text-color: rgba(255, 255, 255, 0.5);
   --headline-color: white;
+  color: var(--text-color);
 }
 
-section {
+.one {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+}
+
+.two {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  pointer-events: all;
+  margin-top: 50vh;
   display: flex;
   align-items: center;
   justify-content: start;
   flex-direction: column;
+  background-color: #f1f1fb;
+}
+
+.three {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f1fb;
 }
 
 .nav {
@@ -57,25 +57,48 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0px 20px;
+  padding: 0px 5%;
   align-items: center;
   z-index: 10;
+  bottom: 0;
 }
 
 .nav h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: bolder;
   color: #182327;
-  font-size: 2rem;
+  font-size: 2.5rem;
   transition: 0.5s;
+  margin-top: 5%;
 }
 
-.nav h1:hover {
-  color: #f8a601;
-}
-
-a {
+.links a {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.links {
+  height: 55px;
+  width: 225px;
+  background-color: #2b2e3a;
+  border-radius: 50px;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.links h1 {
+  color: white;
+  font-size: 1.5rem;
 }
 
 ::-webkit-scrollbar {
@@ -99,135 +122,27 @@ a {
   height: 100%;
 }
 
-.experience {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
+.title {
+  font-size: 7rem;
+  color: #182327;
+  font-family: 'Montserrat', sans-serif;
   top: 0;
-  z-index: 1;
-  pointer-events: none;
 }
 
 .onemain {
-  background-color: #182327;
-  width: 98%;
-  height: 70vh;
-  border-radius: 40px;
-}
-
-.headline-container{
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  pointer-events: all;
   margin-top: 7.5%;
-}
-
-#text-behind, #text-front, #text-behind-blur {
-  font-family: 'Roboto', sans-serif;
-  position: absolute;
-  text-align: center;
-  font-size: clamp(24px, 20vw, 200px);
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 10px;
-  line-height: 0.8;
-  pointer-events: none;
-}
-
-#text-behind {
-  color: var(--headline-color);
-  z-index: 0;
-}
-
-#text-behind-blur {
-  color: var(--headline-color);
-  filter: blur(7.5px);
-  -webkit-filter: blur(7.5px);
-  z-index: 0;
-}
-
-#text-front {
-  /*  Set text-color to transparent to only show the outline  */
-  color: transparent;
-  text-stroke: 2px var(--headline-color);
-  -webkit-text-stroke: 2px var(--headline-color);
-  z-index: 3;
-}
-
-.oneinfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 98%;
-  padding-top: 13px;
-}
-
-.infobig {
-  width: 66%;
-  height: 200px;
+  background-color: #232223;
+  width: 90%;
+  height: 75vh;
   border-radius: 40px;
-  background-color: transparent;
-  border-color: #182327;
-  border-style: solid;
-  border-width: 5px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.desc {
-  color: #182327;
-  margin-bottom: 0;
-  font-size: 3rem;
-}
-
-.descp {
-  color: #182327;
-  margin-top: 0;
-  font-size: 1.25rem;
-}
-
-.info {
-  width: 33%;
-  height: 200px;
-  border-radius: 40px;
-  background-color: #f8a601;
-  border-color: #f8a601;
-  border-style: solid;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #182327;
-  font-size: 2rem;
-}
-
-.buybutton {
-  width: 100px;
-  height: 100px;
-  background-color: #182327;
-  border-radius: 70px;
-  z-index: 1;
-  transition: width 0.7s;
-  margin-left: 2%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.buybutton:hover {
-  width: 200px;
-  transition: width 0.7s;
-}
-
-.buybutton i {
-  position: relative;
+.canvasContainer {
+  border-radius: 50px;
+  z-index: 4;
 }
 
 html.lenis {
