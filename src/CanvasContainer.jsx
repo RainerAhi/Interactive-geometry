@@ -34,7 +34,7 @@ export default function CanvasContainer(props) {
           {/* <Lightformer form="circle" intensity={2} rotation-y={Math.PI / 2} position={[-5, 1, -1]} scale={2} />
           <Lightformer form="circle" intensity={2} rotation-y={Math.PI / 2} position={[-5, -1, -1]} scale={2} />
           <Lightformer form="circle" intensity={2} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={8} /> */}
-          <Lightformer form="ring" color="#4060ff" intensity={80} onUpdate={(self) => self.lookAt(0, 0, 0)} position={[10, 10, 0]} scale={10} />
+          <Lightformer form="ring" color="#b9a3f3" intensity={80} onUpdate={(self) => self.lookAt(0, 0, 0)} position={[10, 10, 0]} scale={10} />
         </group>
       </Environment>
     </Canvas>
@@ -54,7 +54,7 @@ function Sphere({ position, children, vec = new THREE.Vector3(), scale, r = THRE
       <BallCollider args={[1]} />
       <mesh ref={ref} castShadow receiveShadow>
         <sphereGeometry args={[1, 80, 80]} />
-        <meshStandardMaterial color="#6495ED" roughness={0.5} metalness={0.6} transparent={false} opacity={1} />
+        <meshStandardMaterial color="#b9a3f3" roughness={0.5} metalness={0.6} transparent={false} opacity={1} />
       </mesh>
     </RigidBody>
   )

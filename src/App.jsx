@@ -6,7 +6,9 @@ import Lenis from "@studio-freight/lenis";
 import { useProgress } from "@react-three/drei";
 import { Suspense } from "react";
 import { SectionTwo } from "./Sections/SectionTwo";
-import { SectionThree } from "./Sections/SectionThree";
+import { SectionFive } from "./Sections/SectionFive";
+import { SectionFour } from "./Sections/SectionFour";
+import { SectionThree } from "./Sections/SectionsThree";
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -14,7 +16,7 @@ const LoadingScreen = () => {
   return (
     <div className={`loading-screen ${active ? "" : "loading-screen--hidden"}`}>
       <div className="loading-screen__container">
-        <h1 className="loading-screen__title">PORSCHE LANDING PAGE</h1>
+        <h1 className="loading-screen__title">NIKE FOOTBALL</h1>
         <div className="progress__container">
           <div
             className="progress__bar"
@@ -28,6 +30,40 @@ const LoadingScreen = () => {
 
 function App() {
 
+  const lenis = new Lenis({
+    duration: 1, // speed
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+    direction: "vertical", // vertical, horizontal
+    gestureDirection: "vertical", // vertical, horizontal, both
+    smooth: true,
+    mouseMultiplier: 0.5, // sensibility
+    smoothTouch: false, // Mobile
+    touchMultiplier: 2, // sensibility on mobile
+    infinite: false // Infinite scrolling
+  });
+  
+  //get scroll value
+  // Here we can do a throttle like
+  // in other projects to reduce the callbacks.
+  // lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+  //   console.log(direction);
+  // });
+  
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  
+  function addAnotherSection() {
+    const element = document.createElement("div");
+    element.classList.add("section");
+    element.innerHTML = "";
+    document.body.appendChild(element);
+  }
+  
+  requestAnimationFrame(raf);
+  setTimeout(addAnotherSection, 1000);
+
     return (
       <>
         <main className="main" >
@@ -38,9 +74,11 @@ function App() {
                 </Suspense> */}
             </div>
 
-            <SectionOne />
-            <SectionTwo />
-            <SectionThree />
+              <SectionOne />
+              <SectionTwo />
+              <SectionThree />
+              <SectionFour />
+              <SectionFive />
             
         </main>
         </>
