@@ -4,11 +4,18 @@ import { SectionOne } from "./Sections/SectionOne";
 import Lenis from "@studio-freight/lenis";
 
 import { useProgress } from "@react-three/drei";
-import { Suspense } from "react";
+import { Suspense, useLayoutEffect } from "react";
 import { SectionTwo } from "./Sections/SectionTwo";
 import { SectionFive } from "./Sections/SectionFive";
 import { SectionFour } from "./Sections/SectionFour";
 import { SectionThree } from "./Sections/SectionsThree";
+import { SectionSix } from "./Sections/SectionSix";
+import { SectionSeven } from "./Sections/SectionSeven";
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useThree } from "@react-three/fiber";
+import Football from "./Sections/Football";
+gsap.registerPlugin(ScrollTrigger);
 
 const LoadingScreen = () => {
   const { progress, active } = useProgress();
@@ -64,14 +71,41 @@ function App() {
   requestAnimationFrame(raf);
   setTimeout(addAnotherSection, 1000);
 
+  const tl = gsap.timeline()
+
+  useLayoutEffect(() => {
+
+    tl
+    .to(".experience", {opacity: 1,
+    scrollTrigger: {
+      trigger: ".six",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      immediateRender: false,
+    }})
+
+    tl
+    .to(".experience", { width: "100%", height: "100vh",
+    scrollTrigger: {
+      trigger: ".seven",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      immediateRender: false,
+    }})
+
+
+  }, [])
+
     return (
       <>
         <main className="main" >
             <LoadingScreen />
             <div  className="experience">
-                {/* <Suspense>
-                <CanvasContainer />
-                </Suspense> */}
+                <Suspense>
+                <Football />
+                </Suspense>
             </div>
 
               <SectionOne />
@@ -79,6 +113,8 @@ function App() {
               <SectionThree />
               <SectionFour />
               <SectionFive />
+              <SectionSix />
+              <SectionSeven />
             
         </main>
         </>
