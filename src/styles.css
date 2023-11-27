@@ -81,13 +81,13 @@ body,
   background-color: #18191b;
 }
 
-.six {
+/* .six {
   position: relative;
   width: 100%;
   height: 100vh;
   background-color: #18191b;
   display: flex;
-}
+} */
 
 .seven {
   position: relative;
@@ -243,7 +243,7 @@ body,
   z-index: 4;
 }
 
-.container {
+.containerBox {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -300,39 +300,68 @@ body,
   color: #b9a3f3;
 }
 
-/* .six {
+.container {
   position: relative;
   width: 100%;
-  height: 200vh;
-  background-color: bisque;
-  display: flex;
-  align-items: start; 
-  justify-content: left;
+  height: 100vh;
+  background-color: #b9a3f3;
 }
 
-.footballContainer {
-  background-color: #b9a3f3;
-  width: 40%;
-  height: 80vh;
-  border-radius: 100px;
-  display: flex;
-  align-items: center; 
-  justify-content: center; 
-  position: fixed;
-  z-index: 1;
-} */
+.canvas {
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  width: 100vw !important;
+  height: 100vh !important;
+}
 
-.experience {
+.text {
+  line-height: 1em;
+  text-align: left;
+  font-size: 7em;
+  word-break: break-word;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.view {
+  margin: 0.2em;
+  width: 400px;
+  height: 200px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+@keyframes scaleAnim {
+  0% {
+    transform: scale(0.3, 0.7);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.3, 0.7);
+  }
+}
+
+.scale {
+  animation: scaleAnim 5s ease-in-out 0s infinite;
+}
+
+/* .experience {
   height: 50vh;
   width: 50%;
   position: fixed;
   top: 0;
   z-index: 11;
-  pointer-events: none;
   opacity: 0;
   background-color: #ffb282;
   border-radius: 50px;
-}
+  display: flex;
+} */
 
 
 html.lenis {

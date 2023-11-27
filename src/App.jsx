@@ -71,42 +71,32 @@ function App() {
   requestAnimationFrame(raf);
   setTimeout(addAnotherSection, 1000);
 
-  const tl = gsap.timeline()
+  // const tl = gsap.timeline()
 
-  useLayoutEffect(() => {
+  // useLayoutEffect(() => {
 
-    tl
-    .to(".experience", {opacity: 1,
-    scrollTrigger: {
-      trigger: ".six",
-      start: "top bottom",
-      end: "top top",
-      scrub: true,
-      immediateRender: false,
-    }})
-
-    tl
-    .to(".experience", { width: "100%", height: "100vh",
-    scrollTrigger: {
-      trigger: ".seven",
-      start: "top bottom",
-      end: "top top",
-      scrub: true,
-      immediateRender: false,
-    }})
+  //   tl
+  //   .to(".footballContainer", { scale: 1.5,
+  //   scrollTrigger: {
+  //     trigger: ".seven",
+  //     start: "top bottom",
+  //     end: "top top",
+  //     scrub: true,
+  //     immediateRender: false,
+  //   }})
 
 
-  }, [])
+  // }, [])
 
     return (
       <>
         <main className="main" >
             <LoadingScreen />
-            <div  className="experience">
+            {/* <div  className="experience">
                 <Suspense>
                 <Football />
                 </Suspense>
-            </div>
+            </div> */}
 
               <SectionOne />
               <SectionTwo />

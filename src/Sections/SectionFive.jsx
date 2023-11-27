@@ -3,7 +3,7 @@ import React from "react";
 export const SectionFive = () => {
     return (
         <section className="three" >
-        <div className="container">
+        <div className="containerBox">
           <div className="infobox" >
             <div className="square">
               <img className="" src="./nike3.jpg" />
