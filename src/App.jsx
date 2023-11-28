@@ -15,6 +15,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useThree } from "@react-three/fiber";
 import Football from "./Sections/Football";
+import { SectionEight } from "./Sections/SectionEight";
 gsap.registerPlugin(ScrollTrigger);
 
 const LoadingScreen = () => {
@@ -71,32 +72,27 @@ function App() {
   requestAnimationFrame(raf);
   setTimeout(addAnotherSection, 1000);
 
-  // const tl = gsap.timeline()
+  const tl = gsap.timeline()
 
-  // useLayoutEffect(() => {
+  useLayoutEffect(() => {
 
-  //   tl
-  //   .to(".footballContainer", { scale: 1.5,
-  //   scrollTrigger: {
-  //     trigger: ".seven",
-  //     start: "top bottom",
-  //     end: "top top",
-  //     scrub: true,
-  //     immediateRender: false,
-  //   }})
+    tl
+    .to(".one", { opacity: 0,
+    scrollTrigger: {
+      trigger: ".three",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      immediateRender: false,
+    }})
 
 
-  // }, [])
+  }, [])
 
     return (
       <>
         <main className="main" >
             <LoadingScreen />
-            {/* <div  className="experience">
-                <Suspense>
-                <Football />
-                </Suspense>
-            </div> */}
 
               <SectionOne />
               <SectionTwo />
@@ -105,6 +101,7 @@ function App() {
               <SectionFive />
               <SectionSix />
               <SectionSeven />
+              <SectionEight />
             
         </main>
         </>

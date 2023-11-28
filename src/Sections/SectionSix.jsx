@@ -1,4 +1,4 @@
-import { forwardRef, useRef, useState } from 'react'
+import { forwardRef, useLayoutEffect, useRef, useState } from 'react'
 import { Canvas, useThree } from '@react-three/fiber'
 import {
   View,
@@ -12,36 +12,49 @@ import {
   useTexture
 } from '@react-three/drei'
 import Model from './Model'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
 
 export const SectionSix = () => {
 
   const view1 = useRef()
   const ref = useRef()
 
+  const tl = gsap.timeline()
+
+  useLayoutEffect(() => {
+
+    tl
+    .to(".view", { width: "100vw", height: "100vh",   transform: "translateY(0)", borderRadius: 0,
+    scrollTrigger: {
+      trigger: ".containertwo",
+      start: "top bottom",
+      end: "top top",
+      scrub: true,
+      immediateRender: false,
+    }})
+
+
+  }, [])
+
     return (
+      <>
     <div ref={ref} className='container' >
-        <div className='text' >
-          <div ref={view1} className='view scale' style={ { height: 300 } } />
-          We've tried our best to keep breaking changes to a minimum,
-        </div>
+      <div ref={view1} className='view' style={ { height: "40vw", width: "40vw" } } />
       <Canvas eventSource={ref} className='canvas' >
         <View track={ view1 }>
-          <Common color="lightblue" />
           <Model />
-          <OrbitControls makeDefault />
+          <OrbitControls makeDefault enableZoom={ false } />
+          <Environment preset='sunset' />
+          <PerspectiveCamera makeDefault fov={40} position={[0, 7, 13]} />
         </View>
       </Canvas>
     </div>
+
+    <div className='containertwo' >
+      <h1>Container two</h1>
+    </div>
+    </>
     )
 }
-
-const Common = ({ color }) => (
-  <>
-    {color && <color attach="background" args={[color]} />}
-    <ambientLight intensity={0.5} />
-    <pointLight position={[20, 30, 10]} intensity={1} />
-    <pointLight position={[-10, -10, -10]} color="blue" />
-    <Environment preset="dawn" />
-    <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
-  </>
-)
