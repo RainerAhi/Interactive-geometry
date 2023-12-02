@@ -26,7 +26,7 @@ export const SectionSix = () => {
   useLayoutEffect(() => {
 
     tl
-    .to(".view", { width: "100vw", height: "100vh",   transform: "translateY(0)", borderRadius: 0,
+    .to(".view", { width: "100vw", height: "100vh",  borderRadius: 0, position: "fixed", marginLeft: 0,
     scrollTrigger: {
       trigger: ".containertwo",
       start: "top bottom",
@@ -41,19 +41,22 @@ export const SectionSix = () => {
     return (
       <>
     <div ref={ref} className='container' >
-      <div ref={view1} className='view' style={ { height: "40vw", width: "40vw" } } />
+      <div ref={view1} className='view' style={ { height: "35vw", width: "47.5vw" } } />
+      <div className='experienceinfo' >
+        <p >Nike, Inc. is an American athletic footwear and apparel corporation headquartered near Beaverton, Oregon, United States. <br /> <br /> It is the world's largest supplier of athletic shoes and apparel and a major manufacturer of sports equipment, with revenue in excess of US$46 billion in its fiscal year 2022.</p>
+      </div>
       <Canvas eventSource={ref} className='canvas' >
         <View track={ view1 }>
-          <Model />
+          <Model position={ [ 0, 0, 0 ] } scale={ 1 } />
           <OrbitControls makeDefault enableZoom={ false } />
           <Environment preset='sunset' />
-          <PerspectiveCamera makeDefault fov={40} position={[0, 7, 13]} />
+          <ambientLight intensity={ 0.7 } />
+          <PerspectiveCamera makeDefault fov={40} position={[0, 15, 0]} />
         </View>
       </Canvas>
     </div>
 
     <div className='containertwo' >
-      <h1>Container two</h1>
     </div>
     </>
     )

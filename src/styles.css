@@ -16,7 +16,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-color: #18191b;
+  background-color: #f1f1fb;
   text-align: center;
   --text-color: rgba(255, 255, 255, 0.5);
   --headline-color: white;
@@ -30,7 +30,7 @@ body,
   left: 0;
   width: 100%;
   height: 70vh;
-  background-color: #18191b;
+  background-color: #f1f1fb;
 }
 
 .two {
@@ -42,14 +42,14 @@ body,
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  background-color: #18191b;
+  background-color: #f1f1fb;
 }
 
 .infosection {
   position: relative;
   width: 100%;
   height: 60vh;
-  background-color: #18191b;
+  background-color: #f1f1fb;
   display: flex;
   flex-direction: column;
 }
@@ -57,7 +57,7 @@ body,
 .nike {
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
-  color: #ffb282;
+  color: #000101;
   text-align: left;
   margin-left: 5%;
   font-size: 4rem;
@@ -65,7 +65,7 @@ body,
 }
 
 .introduction {
-  color: white;
+  color: #000101;
   font-family: 'Inter', sans-serif;
   font-weight: 300;
   font-size: 3.5rem;
@@ -79,7 +79,7 @@ body,
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #18191b;
+  background-color: #f1f1fb;
 }
 
 /* .six {
@@ -94,7 +94,7 @@ body,
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: #ffb282;
+  background-color: transparent;
   display: flex;
 }
 
@@ -102,8 +102,28 @@ body,
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: beige;
+  background-color: #f1f1fb;
   display: flex;
+  z-index: 4;
+}
+
+.space {
+  position: relative;
+  width: 100%;
+  height: 150vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.space h1 {
+  color: #000101;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15rem;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 13rem;
+  z-index: 2;
 }
 
 .nav {
@@ -123,7 +143,7 @@ body,
 .nav h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bolder;
-  color: white;
+  color: #000101;
   font-size: 2.5rem;
   transition: 0.5s;
   margin-top: 5%;
@@ -136,7 +156,7 @@ body,
   justify-content: center;
 }
 
-.links a h1 {
+.links h1 {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
@@ -144,8 +164,8 @@ body,
 
 .links {
   height: 55px;
-  width: 225px;
-  background-color: #b9a3f3;
+  width: 200px;
+  background-color: #2b2e3a;
   border-radius: 50px;
   margin-top: 5%;
   display: flex;
@@ -156,28 +176,66 @@ body,
 }
 
 .links:hover {
-  background-color: #ffb282;
+  background-color: #d3b679;
 }
 
 .links h1 {
-  color: white;
+  color: #f1f1fb;
   font-size: 1.5rem;
+}
+
+.links:hover h1 {
+  color: white;
+}
+
+.left-content {
+  display: flex;
+  align-items: center;
+}
+
+.right-content {
+  display: flex;
+  align-items: center;
 }
 
 .motivation {
   font-family: 'Montserrat', sans-serif;
-  color: white;
+  color: #000101;
   font-size: 8rem;
+}
+
+.linksone {
+  height: 55px;
+  width: 55px;
+  background-color: #e5e7ef;
+  border-radius: 50px;
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: 0.5s;
+  color: #000101;
+  margin-right: 25px;
+}
+
+.linksone a i {
+  scale: 1.5;
+  color: #000101;
+}
+
+.linksone:hover {
+  background-color: #d3b679;
 }
 
 .cuts {
   display: inline;
-  color: #ffb282;
+  color: #000101;
 }
 
 .glory {
   display: inline;
-  color: #b9a3f3;
+  color: #d3b679;
 }
 
 ::-webkit-scrollbar {
@@ -187,12 +245,12 @@ body,
 ::-webkit-scrollbar-thumb {
   background-clip: padding-box;
   border-radius: 9999px;
-  background-color: #b9a3f3;
+  background-color: #000101;
 }
 /* TRACK */
 ::-webkit-scrollbar-track {
-  background-color: #ffb282;
-  border-radius: 15px;
+  background-color: #d8d8e1;
+  border-radius: 30px;
   margin: 250px;
 }
 
@@ -211,7 +269,7 @@ body,
 }
 
 .onemain {
-  background-color: #b9a3f3;
+  background-color: #15171b;
   width: 90%;
   height: 75vh;
   border-radius: 50px;
@@ -236,8 +294,8 @@ body,
   justify-content: space-between;
   font-family: 'Inter', sans-serif;
   font-weight: 100;
-  color: white;
-  opacity: 0.5;
+  color: #000101;
+  opacity: 1;
   margin-top: 2.5%;
   margin-bottom: 2.5%;
 }
@@ -265,7 +323,8 @@ body,
   width: 40vw;
   height: 50vw;
   text-align: left;
-  color: white;
+  color: #000101;
+  z-index: 1;
 }
 
 .infobox h1 {
@@ -278,7 +337,7 @@ body,
 .infobox p {
   font-family: 'Inter', sans-serif;
   font-size: 1.5rem;
-  opacity: 0.8;
+  opacity: 1;
   margin-top: 2.5%;
 }
 
@@ -307,16 +366,33 @@ body,
 }
 
 .infobox:hover h1 {
-  color: #b9a3f3;
+  color: #d3b679;
 }
 
 .container {
   position: relative;
   width: 100%;
-  height: 200vh;
-  background-color: wheat;
+  height: 100vh;
+  background-color: #f1f1fb;
   display: flex;
+  justify-content: left;
+  flex-direction: row;
+}
+
+.experienceinfo {
+  width: 60vh;
+  height: 50vh;
+  background-color: transparent;
   justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  color: #000101;
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+  margin-top: 10vh;
+  z-index: 0;
 }
 
 .containertwo {
@@ -328,22 +404,26 @@ body,
 }
 
 .view {
-  width: 40vw;
-  height: 40vw;
   overflow: hidden;
-  background-color: black;
+  background-color: #15171b;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   border-radius: 100px;
-  position: sticky;
+  position: relative;
   top: 0;
+  margin-left: 5%;
+  border: #15171b;
+  border-style: solid;
+  border-width: 15px;
+  z-index: 2;
 }
 
 .canvas {
   position: fixed !important;
   top: 0px;
   left: 0px;
+  z-index: 3;
 }
 
 @keyframes scaleAnim {
@@ -419,7 +499,7 @@ html.lenis {
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #18191b;
+  background-color: #f1f1fb;
   opacity: 1;
   transition: opacity 1s ease-in-out;
 }
@@ -443,14 +523,14 @@ html.lenis {
   font-size: 4rem;
   font-weight: 900;
   text-transform: uppercase;
-  color: white;
+  color: #000101;
   margin: 0;
 }
 
 .progress__container {
   width: 100%;
   height: 1rem;
-  background-color: #b9a3f3;
+  background-color: #d8d8e1;
   position: relative;
   overflow: hidden;
   border-radius: 4px;
@@ -459,8 +539,22 @@ html.lenis {
 .progress__bar {
   width: 0;
   height: 100%;
-  background-color: #ffb282;
+  background-color: #d3b679;
   transition: width 0.5s ease-in-out;
+}
+
+svg.squiggle {
+  position: absolute;
+  top: 400vh;
+  left: 0;
+  width: 100vw;
+  height: 200vw;
+  z-index: 0;
+}
+
+svg.squiggle path {
+  stroke-width: 1.25rem;
+  z-index: -2;
 }
 
 

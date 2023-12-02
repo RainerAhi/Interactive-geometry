@@ -8,9 +8,9 @@ import Model from './Model'
 
 export default function Football(props) {
   return (
-    <Canvas className='football'  camera={{ position: [0, 5, 6] }}>
+    <Canvas className='football'  camera={{ position: [0, 125, 126] }}>
         <Environment preset='sunset' />
-        <Model />
+        <Model scale={ 0.05 } />
     </Canvas>
   )
 }
