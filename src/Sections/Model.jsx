@@ -1,9 +1,36 @@
 
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+gsap.registerPlugin(ScrollTrigger);
+import { useThree } from "@react-three/fiber";
 
 export default function Model(props) {
   const { nodes, materials } = useGLTF("./basketballcourt.glb");
+
+  const { camera, scene } = useThree()
+
+  const tl = gsap.timeline()
+
+  useLayoutEffect(() => {
+
+    tl
+    .to(camera.position, {
+      x: 0,
+      y: 10,
+      z: 100,
+      scrollTrigger: {
+        trigger: ".seven",
+        start: "top bottom",
+        end: "top top",
+        scrub: true,
+        immediateRender: false,
+      },
+    })
+    
+  }, [])
+
   return (
     <group {...props} dispose={null}>
       <group scale={0.01}>

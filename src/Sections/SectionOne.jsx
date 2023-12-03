@@ -19,7 +19,15 @@ export const SectionOne = () => {
                     </div>
                 </div>
             </div>
-            <h1 className="motivation">TWICE THE <span className="cuts">CUTS</span> <br /> DOUBLE THE <span className="glory">GLORY.</span></h1>
+            <h1 class="motivation">
+                <span class="word">TWICE </span>
+                <span class="word">THE </span>
+                <span class="word cuts ">CUTS</span>
+                <br />
+                <span class="word">DOUBLE </span>
+                <span class="word">THE </span>
+                <span class="word glory">GLORY.</span>
+            </h1>
         </section>
     )
 }

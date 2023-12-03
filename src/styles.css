@@ -199,12 +199,6 @@ body,
   align-items: center;
 }
 
-.motivation {
-  font-family: 'Montserrat', sans-serif;
-  color: #000101;
-  font-size: 8rem;
-}
-
 .linksone {
   height: 55px;
   width: 55px;
@@ -227,6 +221,12 @@ body,
 
 .linksone:hover {
   background-color: #d3b679;
+}
+
+.motivation {
+  font-family: 'Montserrat', sans-serif;
+  color: #000101;
+  font-size: 8rem;
 }
 
 .cuts {
@@ -494,6 +494,165 @@ html.lenis {
   .container {
     flex-direction: column;
   }
+
+
+  .nav {
+    background-color: transparent;
+    width: 100%;
+    height: 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 1%;
+    align-items: center;
+    z-index: 10;
+    bottom: 0;
+    margin-top: 2.5%;
+  }
+  
+  .nav h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #000101;
+    font-size: 1.5rem;
+    transition: 0.5s;
+    margin-top: 7.5%;
+    margin-left: 2.5%;
+  }
+  
+  .links a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .links h1 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .links {
+    height: 40px;
+    width: 130px;
+    background-color: #2b2e3a;
+    border-radius: 50px;
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+  }
+  
+  .links:hover {
+    background-color: #2b2e3a;
+  }
+  
+  .links h1 {
+    color: #f1f1fb;
+    font-size: 1rem;
+  }
+  
+  .links:hover h1 {
+    color: white;
+  }
+  
+  .left-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .linksone {
+    height: 40px;
+    width: 40px;
+    background-color: #e5e7ef;
+    border-radius: 50px;
+    margin-top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.5s;
+    color: #000101;
+    margin-right: 5px;
+  }
+  
+  .linksone a i {
+    scale: 1;
+    color: #000101;
+  }
+  
+  .linksone:hover {
+    background-color: #e5e7ef;
+  }
+
+  .motivation {
+    font-family: 'Montserrat', sans-serif;
+    color: #000101;
+    font-size: 4.75rem;
+    white-space: nowrap;
+    line-height: 3.75rem;
+  }
+
+  .motivation br {
+    display: none; /* Hide <br /> on smaller screens */
+  }
+
+  .word {
+    display: block; /* Display each word on a separate line */
+  }
+
+  .cuts {
+    color: #d3b679;
+  }
+
+  .infosection {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #f1f1fb;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nike {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #000101;
+    text-align: left;
+    margin-left: 5%;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  
+  .introduction {
+    color: #000101;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    width: 80%;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 1%;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f1f1fb;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
+
 
 }
 

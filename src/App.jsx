@@ -86,8 +86,6 @@ function App() {
       scrub: true,
       immediateRender: false,
     }})
-    
-
 
   }, [])
 

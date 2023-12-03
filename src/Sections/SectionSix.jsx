@@ -20,6 +20,7 @@ export const SectionSix = () => {
 
   const view1 = useRef()
   const ref = useRef()
+  const perspectiveCamera= useRef()
 
   const tl = gsap.timeline()
 
@@ -48,10 +49,10 @@ export const SectionSix = () => {
       <Canvas eventSource={ref} className='canvas' >
         <View track={ view1 }>
           <Model position={ [ 0, 0, 0 ] } scale={ 1 } />
-          <OrbitControls makeDefault enableZoom={ false } />
+          <OrbitControls makeDefault enableZoom={ false } enablePan={ false } enableRotate={ false } />
           <Environment preset='sunset' />
           <ambientLight intensity={ 0.7 } />
-          <PerspectiveCamera makeDefault fov={40} position={[0, 5, 5]} />
+          <PerspectiveCamera ref={ perspectiveCamera } makeDefault fov={40} position={[0, 5, 5]} />
         </View>
       </Canvas>
     </div>

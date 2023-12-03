@@ -7,7 +7,6 @@ export const SectionTwo = () => {
         <div className="border" />
         <div className="info" >
           <h1>Scroll to explore the website</h1>
-          <h1>+</h1>
           <h1>Innovative products & experiences</h1>
         </div>
         <div className="onemain" >
