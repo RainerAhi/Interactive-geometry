@@ -43,7 +43,7 @@ export const SectionSix = () => {
     <div ref={ref} className='container' >
       <div ref={view1} className='view' style={ { height: "35vw", width: "47.5vw" } } />
       <div className='experienceinfo' >
-        <p >Nike, Inc. is an American athletic footwear and apparel corporation headquartered near Beaverton, Oregon, United States. <br /> <br /> It is the world's largest supplier of athletic shoes and apparel and a major manufacturer of sports equipment, with revenue in excess of US$46 billion in its fiscal year 2022.</p>
+        <p >Basketball, a global phenomenon of athletic prowess and team spirit, transcends mere sport to become a cultural icon. From street courts to grand arenas, it unites fans worldwide in a symphony of athleticism and passion. <br /> <br /> Generating an immersive experience, it's more than a game—it's a vibrant tapestry of skill, strategy, and sheer determination, captivating audiences and inspiring generations.</p>
       </div>
       <Canvas eventSource={ref} className='canvas' >
         <View track={ view1 }>
@@ -51,7 +51,7 @@ export const SectionSix = () => {
           <OrbitControls makeDefault enableZoom={ false } />
           <Environment preset='sunset' />
           <ambientLight intensity={ 0.7 } />
-          <PerspectiveCamera makeDefault fov={40} position={[0, 15, 0]} />
+          <PerspectiveCamera makeDefault fov={40} position={[0, 5, 5]} />
         </View>
       </Canvas>
     </div>

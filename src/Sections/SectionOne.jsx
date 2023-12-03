@@ -6,7 +6,7 @@ export const SectionOne = () => {
         <section className="one">
             <div className="nav">
                 <div className="left-content">
-                    <h1>NIKE FOOTBALL</h1>
+                    <h1>BASKETBALL</h1>
                 </div>
                 <div className="right-content">
                     <div className="linksone" >

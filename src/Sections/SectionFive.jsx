@@ -6,17 +6,17 @@ export const SectionFive = () => {
         <div className="containerBox">
           <div className="infobox" >
             <div className="square">
-              <img className="" src="./nike3.jpg" />
+              <img className="" src="./fest.jpg" />
             </div>
-            <h1>EQUIPMENT</h1>
-            <p>High-contrast graphics help you easily track the ball so you can focus on your footwork.</p>
+            <h1>FESTIVAL</h1>
+            <p>Immerse yourself in the pulsating heartbeat of a festival experience that transcends boundaries.</p>
           </div>
           <div className="infobox" >
             <div className="square">
-              <img className="" src="./nike6.jpg" />
+              <img className="" src="./high.jpg" />
             </div>
-            <h1>TIEMPO</h1>
-            <p>Lets you go on the offensive with a low-profile design that's reinvented for attackers.</p>
+            <h1>HIGHLIGHTS</h1>
+            <p>Dive into the adrenaline-packed world of basketball highlights with a revamped approach that celebrates the game's explosive energy.</p>
           </div>
         </div>
       </section>
